@@ -21,13 +21,13 @@ describe ChangeMaker do
     end
 
     it "creates change for 5 cents given different denominations" do
-      ChangeMaker.make_change(5, [1, 3])
+      result = ChangeMaker.make_change(5, [1, 3])
       
       expect(result).to match_array([3, 1, 1])
     end
 
     it "creates change for 17 cents given different denominations" do
-      ChangeMaker.make_change(17, [1, 8, 10])
+      result = ChangeMaker.make_change(17, [1, 8, 10])
       
       expect(result).to match_array([8, 8, 1])
     end
